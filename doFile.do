@@ -1,8 +1,8 @@
-import excel "C:\Users\david\Dropbox\RA application\Classwork and other interships\More statistical code\town_names.xlsx", sheet("Sheet1") firstrow clear
+import excel .xlsx", sheet("Sheet") firstrow clear
 *rename TownID town_id
-save "C:\Users\david\Dropbox\RA application\Classwork and other interships\More statistical code\towns.dta", replace
-import excel "C:\Users\david\Dropbox\RA application\Classwork and other interships\More statistical code\data.xlsx", sheet("Sheet1") firstrow clear
-merge m:1 town_id using "C:\Users\david\Dropbox\RA application\Classwork and other interships\More statistical code\towns.dta"
+save "dta", replace
+import excel ".xlsx", sheet("Sheet1") firstrow clear
+merge m:1 town_id using ".dta"
 destring district, generate(district_numeric)
 * eliminating data that is not needed
 drop if registered_female == - 999| registered_female == -998
