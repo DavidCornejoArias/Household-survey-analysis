@@ -1,5 +1,5 @@
 
-local EHPM2018 = "C:\Users\david\Dropbox\RA application\Classwork and other interships\Stata\EHPM2018.dta"
+local EHPM2018 = ""
 use "`EHPM2018'",clear
 *Population according to type of area
 tabulate area [w=fac00]
